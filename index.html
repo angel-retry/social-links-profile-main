@@ -1,34 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Social links profile</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Social links profile</title>
 
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
 
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", serif;
+
+        background: hsl(0, 0%, 8%);
+        margin: 0;
+      }
+
+      p,
+      blockquote,
+      figure {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .container {
+        width: 384px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        gap: 26px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background: hsl(0, 0%, 12%);
+        border-radius: 10px;
+      }
+
+      .user-detail-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 27px;
+      }
+
+      .user-avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .user-avatar img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .user-info {
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+      }
+
+      .user-info-name {
+        font-size: 24px;
+        color: hsl(0, 0%, 100%);
+        font-weight: bold;
+      }
+
+      .user-info-address {
+        font-size: 14px;
+        color: hsl(75, 94%, 57%);
+      }
+
+      .user-description {
+        color: hsl(0, 0%, 100%);
+        font-size: 14px;
+      }
+
+      .user-links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+      }
+
+      .user-links-btn {
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: hsl(0, 0%, 20%);
+        border-radius: 8px;
+      }
+
+      @media screen and (max-width: 375px) {
+        .container {
+          width: 324px;
+          padding: 20px 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main role="main">
+      <section>
+        <div class="container">
+          <div
+            class="user-detail-container"
+            role="region"
+            aria-labelledby="user-info"
+          >
+            <figure class="user-avatar">
+              <img
+                src="./assets/images/avatar-jessica.jpeg"
+                alt="Portrait of Jessica Randall"
+              />
+            </figure>
+
+            <div class="user-info" id="user-info">
+              <p class="user-info-name">Jessica Randall</p>
+              <p class="user-info-address">London, United Kingdom</p>
+            </div>
+
+            <div class="user-description">
+              <blockquote>“Front-end developer and avid reader.”</blockquote>
+            </div>
+          </div>
+
+          <nav class="user-links-container" aria-label="User social links">
+            <a href="https://github.com" class="user-links-btn">Github</a>
+            <a href="https://frontendmentor.io" class="user-links-btn"
+              >Frontend Mentor</a
+            >
+            <a href="https://linkedin.com" class="user-links-btn">LinkedIn</a>
+            <a href="https://twitter.com" class="user-links-btn">Twitter</a>
+            <a href="https://instagram.com" class="user-links-btn">Instagram</a>
+          </nav>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
+
